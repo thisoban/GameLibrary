@@ -1,0 +1,16 @@
+{
+  "navs": [
+    {
+      "name": "home",
+      "url": "home"
+    },
+    {
+      "name": "games",
+      "url": "games"
+    },
+    {
+      "name": "about us",
+      "url": "aboutus"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./GameLibraryServer
+        working-directory: ./BackEnd/GameLibraryBackEnd
     strategy:
       matrix: 
         os: [ubuntu-20.04, windows-2019]

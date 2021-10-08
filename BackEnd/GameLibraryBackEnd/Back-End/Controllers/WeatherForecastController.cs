@@ -35,5 +35,12 @@ namespace Back_End.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet]
+        [Route ("getgame")]
+        public IEnumerable<game> Get()
+        {
+
+        }
     }
 }

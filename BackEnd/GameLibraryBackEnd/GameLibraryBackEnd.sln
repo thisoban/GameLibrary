@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Back-End", "Back-End\Back-E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{D2F328C3-0FCC-4910-8E19-4D1991B7AD55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{D4B46843-2677-4876-B966-BEB8693C4A58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{D4B46843-2677-4876-B966-BEB8693C4A58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILogic", "ILogic\ILogic.csproj", "{CC6402D8-9BE4-4A81-B94D-C25E8C196669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILogic", "ILogic\ILogic.csproj", "{CC6402D8-9BE4-4A81-B94D-C25E8C196669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{932509D5-BF53-467E-95AF-CF29F23E9231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CC6402D8-9BE4-4A81-B94D-C25E8C196669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC6402D8-9BE4-4A81-B94D-C25E8C196669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC6402D8-9BE4-4A81-B94D-C25E8C196669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932509D5-BF53-467E-95AF-CF29F23E9231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932509D5-BF53-467E-95AF-CF29F23E9231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932509D5-BF53-467E-95AF-CF29F23E9231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932509D5-BF53-467E-95AF-CF29F23E9231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

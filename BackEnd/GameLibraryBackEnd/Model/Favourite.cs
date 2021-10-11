@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-   public class GameModel
+   public class Favourite
     {
         public int ID { get; set; }
+        public string Name { get; set; }
     }
 }

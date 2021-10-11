@@ -18,9 +18,9 @@ namespace Back_End.Controllers
         // 
         [HttpGet]
         [Route("UserDetails")]
-        public UserModel Get()
+        public User Get()
         {//get logic user
-            UserModel user = new UserModel();
+            User user = new User();
             return user;
         }
     }

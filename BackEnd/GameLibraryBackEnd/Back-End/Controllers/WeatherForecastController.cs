@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,11 +37,11 @@ namespace Back_End.Controllers
             .ToArray();
         }
 
-        [HttpGet]
-        [Route ("getgame")]
-        public IEnumerable<game> Get()
-        {
+        //[HttpGet]
+        //[Route ("getgame")]
+        //public IEnumerable<GameModel> Get()
+        //{
 
-        }
+        //}
     }
 }

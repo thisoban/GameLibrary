@@ -7,11 +7,14 @@ namespace Logic
     public class UserLogic : IUserLogic
     {
 
-       public UserModel GetUser(UserModel userModel)
+       public User GetUser(User userModel)
         {
-            UserModel user = new UserModel();
+            User user = new User();
 
-            if(userModel)
+            if (userModel.UserName == user.UserName && userModel.password == user.password) 
+            { 
+
+            }
 
             return user;
         }

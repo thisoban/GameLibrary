@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using IDal;
 
 namespace Back_End
 {
@@ -31,7 +32,9 @@ namespace Back_End
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+            services.AddScoped<IMyContext, MyContext>();
             services.AddScoped<IUserLogic, UserLogic>();
+            services.AddScoped<IUserDal, UserDal>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

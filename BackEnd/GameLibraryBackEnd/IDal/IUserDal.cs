@@ -5,8 +5,9 @@ namespace IDal
 {
     public interface IUserDal
     {
-        User Getuser(string username);
+        User GetuserByName(string username);
 
+        User GetUser(int id);
         void UpdateUser(User user);
 
         void DeleteUser(User user);

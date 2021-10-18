@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IDal\IDal.csproj" />
     <ProjectReference Include="..\ILogic\ILogic.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>

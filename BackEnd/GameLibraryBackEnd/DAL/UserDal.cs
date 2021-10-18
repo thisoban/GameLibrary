@@ -29,8 +29,23 @@ namespace DAL
                 throw;
             }
         }
+        public User GetUser(int id)
+        {
+            User user = new User();
+           
+            try
+            {
+               user = _context.Users.Where(x => x.Id == id).FirstOrDefault();
+            }
+            catch (Exception)
+            {
 
-        public User Getuser(string username)
+                throw;
+            }
+            return user;
+        }
+
+        public User GetuserByName(string username)
         {
             User user = new User();
             try

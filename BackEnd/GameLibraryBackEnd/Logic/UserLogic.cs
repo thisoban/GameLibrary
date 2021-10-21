@@ -44,6 +44,11 @@ namespace Logic
 
         public void UpdateUser(User user)
         {
+            User getuser = _iDal.GetUser(user.Id);
+            if(getuser.Id == user.Id)
+            {
+                //user correct update
+            }
             throw new NotImplementedException();
         }
         public User GetUserByName(User user)

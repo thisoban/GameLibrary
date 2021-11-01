@@ -45,15 +45,16 @@ namespace Logic
         public void UpdateUser(User user)
         {
             User getuser = _iDal.GetUser(user.Id);
-            if(getuser.Id == user.Id)
+            if(getuser.Id == user.Id )
             {
+                _iDal.UpdateUser(user);
                 //user correct update
             }
             throw new NotImplementedException();
         }
         public User GetUserByName(User user)
         {
-            User userbyname = new User();
+            User userbyname = _iDal.GetuserByName(user.UserName);
             return userbyname;
         }
     }

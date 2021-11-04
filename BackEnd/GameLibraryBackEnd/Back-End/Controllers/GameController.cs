@@ -27,10 +27,10 @@ namespace Back_End.Controllers
         {
             return "value";
         }
-        private static async Task<Game> GetGame(int id)
-        {
-            return await $"";
-        }
+        //private static async Task<Game> GetGame(int id)
+        //{
+        //    return await $"";
+        //}
 
         // POST api/<GameController>
         [HttpPost]

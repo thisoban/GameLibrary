@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  gamelibrary-Backend:
+    image: ${DOCKER_REGISTRY-}gamelibrary 
+    build:
+      context: BackEnd/GameLibraryBackEnd
+      dockerfile: Back-End/Dockerfile
+
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+    ports:
+      - "5000:5000"

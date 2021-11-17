@@ -32,9 +32,11 @@ namespace Back_End
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+           // services.AddDbContext<PlantDBContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
             services.AddScoped<IMyContext, MyContext>();
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IUserDal, UserDal>();
+          //  services.AddSingleton(new IGDBClient("dtyf1m6sh84pvfxpml37o5nv9ybapy", "veeb1lzntrosmmk0fzg93y90cn12xi"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,9 +50,11 @@ namespace Back_End
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Back_End v1"));
+               
             }
+            app.UseSwagger();
+           // app.UseSwaggerUI();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Back_End v1"));
 
             app.UseHttpsRedirection();
 

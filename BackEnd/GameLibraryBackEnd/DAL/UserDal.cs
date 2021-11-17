@@ -32,7 +32,7 @@ namespace DAL
         public User GetUser(int id)
         {
             User user = new User();
-           
+          
             try
             {
                user = _context.Users.Where(x => x.Id == id).FirstOrDefault();

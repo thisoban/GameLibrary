@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\OneDrive - Office 365 Fontys\Bureaublad\igdb-dotnet-master\IGDB\IGDB.csproj" />
     <ProjectReference Include="..\DAL\DAL.csproj" />
     <ProjectReference Include="..\IDal\IDal.csproj" />
     <ProjectReference Include="..\ILogic\ILogic.csproj" />

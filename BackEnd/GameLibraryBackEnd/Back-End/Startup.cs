@@ -16,6 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using IDal;
+using Back_End.IGDB;
 
 namespace Back_End
 {
@@ -32,9 +33,8 @@ namespace Back_End
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddDbContext<MyContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
-             services.AddDbContext<MyContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
-            // services.AddDbContext<PlantDBContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
-            //services.Configure<IGDBConfig>(Configuration.GetSection(nameof(IGDBConfig)));
+            services.AddDbContext<MyContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+            services.Configure<IGDBConfig>(Configuration.GetSection(nameof(IGDBConfig)));
             services.AddScoped<IMyContext, MyContext>();
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IUserDal, UserDal>();

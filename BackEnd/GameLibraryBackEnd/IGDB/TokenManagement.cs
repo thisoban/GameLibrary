@@ -80,10 +80,11 @@ namespace IGDB
   {
     private static TwitchAccessToken CurrentToken { get; set; }
 
-    public async Task<TwitchAccessToken> StoreTokenAsync(TwitchAccessToken token)
+    public  Task<TwitchAccessToken> StoreTokenAsync(TwitchAccessToken token)
     {
-      CurrentToken = token;
-      return token;
+            CurrentToken =  token;
+            return Task.FromResult(token);
+            //async function  return token was het
     }
 
     public Task<TwitchAccessToken> GetTokenAsync()

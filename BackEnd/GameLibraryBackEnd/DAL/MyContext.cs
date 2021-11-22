@@ -12,6 +12,7 @@ namespace DAL
         public DbSet<Favourite> Favourites { get; set; }
 
         public MyContext(DbContextOptions options) : base(options) { }
+        
         protected override void OnModelCreating(ModelBuilder builder) => base.OnModelCreating(builder);
     }
 }

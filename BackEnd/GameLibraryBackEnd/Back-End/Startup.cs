@@ -16,7 +16,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using IDal;
-using IGDB;
 
 namespace Back_End
 {
@@ -32,9 +31,10 @@ namespace Back_End
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MyContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+            //services.AddDbContext<MyContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+             services.AddDbContext<MyContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
             // services.AddDbContext<PlantDBContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
-            services.Configure<IGDBConfig>(Configuration.GetSection(nameof(IGDBConfig)));
+            //services.Configure<IGDBConfig>(Configuration.GetSection(nameof(IGDBConfig)));
             services.AddScoped<IMyContext, MyContext>();
             services.AddScoped<IUserLogic, UserLogic>();
             services.AddScoped<IUserDal, UserDal>();

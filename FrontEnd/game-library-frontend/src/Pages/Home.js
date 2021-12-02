@@ -1,58 +1,42 @@
-import './Home.css'
-
-import { useEffect, useState } from 'react';
-
-import GraphCardList from '../Components/GraphCardList';
-import LoadingPopup from '../Components/LoadingPopup';
-import React from 'react'
-import Sidebar from '../Components/Sidebar';
 import { Variables } from '../Components/ApiUrls';
 import axios from "axios";
-
+import GameCard from '../Components/GameCard'
+import React from 'react'   
+import { GameCardList } from '../Components/GameCardList'
 // import { buttonBaseClasses } from '@mui/material';
 // import { display } from '@mui/system';
 
 
 function Home() {
 
-   
+    const [productionlines, setproductionlines] = useState([])
 
-    async function getAllLines() {
+    async function getAllGames() {
         try {
-            const apirequest = await axios.get();
+            const apirequest = await axios.get(Variables.GetAllProductionLinesUrl);
             return apirequest.data;
         } catch (error) {
             console.error(error);
         }
     }
 
-    async function getLines() {
-        setproductionlines(await getAllLines());
+    async function GetGames() {
+        setproductionlines(await getAllGames());
         return;
     }
-
-    function WaitForProductionLines() {
-        if (productionlines.length !== 0) {
-            setShowLoadingPopup(false);
-        }
-        return;
-    }
-
 
     useEffect(() => {
-        getLines()
-        WaitForProductionLines()
+        GetGames()
     })
-
     return (
+       
         <div>
-            {showLoadingPopUp ? <LoadingPopup /> : null}
-            <Sidebar productionlinearray={productionlines} />
-            <div className='container'>
-                {productionlines.length >= 1 ? <GraphCardList Cards={productionlines} /> : null}
+            <div class="container">
+            <GameCardList></GameCardList>
             </div>
+            <p>home page</p>
         </div>
-
+                     
     )
 }
 

@@ -26,9 +26,10 @@ function NavBar() {
     <div>
       <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
+        <title>aids</title>
         <Toolbar>
-          <Button variant="contained" color="primary"><Link to="/" className={classes.link}>Machines</Link></Button> 
-          <Button variant="contained" color="primary"><Link to="/ComponentPage" className={classes.link}>Componenten</Link></Button> 
+          <Button variant="contained" color="primary"><Link to="/Home" className={classes.link}>home</Link></Button> 
+          <Button variant="contained" color="primary"><Link to="/GamesPage" className={classes.link}>Games</Link></Button> 
 
           {/* <Button variant="contained" color="primary"> <Link to="/">Machines</Link> </Button> 
           <Button variant="contained" color="inherit"> <Link to="/ComponentPage">Componenten</Link></Button> */}

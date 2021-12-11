@@ -5,6 +5,7 @@ using System.Linq;
 using Model;
 using Flurl;
 using System.Threading.Tasks;
+using IGDB;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,12 +15,19 @@ namespace Back_End.Controllers
     [ApiController]
     public class GameController : ControllerBase
     {
+        private readonly IGDBService.IGDBService service = new IGDBService.IGDBService();
         // GET: api/<GameController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<IGDB.Models.Game>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var games = await service.GetGames();
+            return games;
         }
+        //public async Task<IEnumerable<IGDB.Models.Game>[]> Get()
+        //{
+        //   var games = await  service.GetGames();
+        //    return (IEnumerable<IGDB.Models.Game>[])games;
+        //}
 
         // GET api/<GameController>/5
         [HttpGet("{id}")]

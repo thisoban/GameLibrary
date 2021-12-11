@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Back_End.IGDB
+namespace Back_End.IGDBService
 {
     public class IGDBConfig
     {

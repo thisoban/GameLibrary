@@ -16,7 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using IDal;
-using Back_End.IGDB;
+using Back_End.IGDBService;
 
 namespace Back_End
 {

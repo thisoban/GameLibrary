@@ -6,18 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Back_End.IGDB
+namespace Back_End.IGDBService
 {
     public class IGDBService : IIGDBService
     {
         public IGDBClient Client { get; }
 
-        public IGDBService(IOptions<IGDBConfig> igdbConfig)
+        public IGDBService()
         {
-            Client = new IGDBClient(igdbConfig.Value.ClientId, igdbConfig.Value.ClientSecret);
+            Client = new IGDBClient("dtyf1m6sh84pvfxpml37o5nv9ybapy", "veeb1lzntrosmmk0fzg93y90cn12xi");
         }
 
-        public async Task<Game> testAsync(int id)
+        public async Task<Game> GetGame(int id)
         {
             var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games, query: $"fields id,name; where id ={id} ;");
             var game = games.First();
@@ -26,7 +26,7 @@ namespace Back_End.IGDB
             return game;
         }
 
-        public async Task<Game[]> Games()
+        public async Task<Game[]> GetGames()
         {
             var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games);
           

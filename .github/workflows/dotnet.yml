@@ -1,45 +1,32 @@
+name: .NET
+
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - '**.gitignore'
-      - '**/README.md'
-      - '**.dockerignore'
-      - '**/stylecop.props'
-      - '**/stylecop.ruleset'
-      - '**/stylecop.json'
   pull_request:
     branches: [ main ]
-    paths-ignore:
-      - '**.gitignore'
-      - '**/README.md'
-      - '**.dockerignore'
-      - '**/stylecop.props'
-      - '**/stylecop.ruleset'
-      - '**/stylecop.json'
+
 jobs:
   build:
-    runs-on: ${{ matrix.os }} 
+
+    runs-on: windows-latest
     defaults:
       run:
         shell: bash
         working-directory: ./BackEnd/GameLibraryBackEnd
     strategy:
-      matrix: 
-        os: [ubuntu-20.04, windows-2019]
-
+      matrix:
+        configuration: [Debug, Release]
+        
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.100
-
-    - name: Install dependencies
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
       run: dotnet restore
-
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-
+      run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-build --verbosity normal

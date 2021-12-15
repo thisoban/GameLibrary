@@ -13,7 +13,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./back-end/Plant-Project-Backend
+        working-directory: ./BackEnd/GameLibraryBackEnd
     strategy:
       matrix:
         configuration: [Debug, Release]

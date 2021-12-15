@@ -16,5 +16,6 @@ namespace ILogic
         void RemoveUser(User user);
         void CreateUser(User user);
         User GetUserByName(User user);
+        void deleteUser(int id);
     }
 }

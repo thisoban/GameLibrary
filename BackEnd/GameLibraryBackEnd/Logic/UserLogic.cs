@@ -39,6 +39,7 @@ namespace Logic
 
         public void RemoveUser(User user)
         {
+
             throw new NotImplementedException();
         }
 
@@ -56,6 +57,11 @@ namespace Logic
         {
             User userbyname = _iDal.GetuserByName(user.UserName);
             return userbyname;
+        }
+
+        public void deleteUser(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

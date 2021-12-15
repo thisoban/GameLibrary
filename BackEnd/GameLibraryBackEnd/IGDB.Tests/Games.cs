@@ -14,8 +14,8 @@ namespace IGDB.Tests
     public Games()
     {
       _api = new IGDB.IGDBClient(
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_ID"),
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_SECRET")
+        Environment.GetEnvironmentVariable("dtyf1m6sh84pvfxpml37o5nv9ybapy"),
+        Environment.GetEnvironmentVariable("veeb1lzntrosmmk0fzg93y90cn12xiT")
       );
     }
 

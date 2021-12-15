@@ -64,7 +64,7 @@ namespace IGDB
     public IGDBClient(string clientId, string clientSecret) :
      this(clientId, clientSecret,
         new InMemoryTokenStore())
-    {
+    { 
     }
 
     /// <summary>

@@ -16,8 +16,8 @@ namespace IGDB.Tests
     {
       var tokenStore = new InvalidTokenStore();
       var invalidTokenClient = new IGDB.IGDBClient(
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_ID"),
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_SECRET"),
+        Environment.GetEnvironmentVariable("dtyf1m6sh84pvfxpml37o5nv9ybapy"),
+        Environment.GetEnvironmentVariable("veeb1lzntrosmmk0fzg93y90cn12xi"),
         tokenStore
       );
 
@@ -32,8 +32,8 @@ namespace IGDB.Tests
     {
       var tokenStore = new ExpiredTokenStore();
       var client = new IGDB.IGDBClient(
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_ID"),
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_SECRET"),
+        Environment.GetEnvironmentVariable("dtyf1m6sh84pvfxpml37o5nv9ybapy"),
+        Environment.GetEnvironmentVariable("veeb1lzntrosmmk0fzg93y90cn12xi"),
         tokenStore
       );
 
@@ -49,8 +49,8 @@ namespace IGDB.Tests
     {
       var tokenStore = new UnexpiredTokenStore();
       var client = new IGDB.IGDBClient(
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_ID"),
-        Environment.GetEnvironmentVariable("IGDB_CLIENT_SECRET"),
+        Environment.GetEnvironmentVariable("dtyf1m6sh84pvfxpml37o5nv9ybapy"),
+        Environment.GetEnvironmentVariable("veeb1lzntrosmmk0fzg93y90cn12xi"),
         tokenStore
       );
 

@@ -45,6 +45,7 @@ namespace Back_End.Controllers
         [HttpPut("{id}")]
         public void Put(int id, User user)
         {
+            _userLogic.UpdateUser(user);
         }
 
         // DELETE api/<UserController>/5

@@ -18,7 +18,7 @@ namespace Back_End.Controllers
         private readonly IGDBService.IGDBService service = new IGDBService.IGDBService();
         // GET: api/<GameController>
         [HttpGet]
-        public async Task<IEnumerable<IGDB.Models.Game>> Get()
+        public async Task<IEnumerable<IGDB.Models.Game>> GetGames()
         {
             var games = await service.GetGames();
             return games;
@@ -31,9 +31,10 @@ namespace Back_End.Controllers
 
         // GET api/<GameController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IGDB.Models.Game> GetGame(int id)
         {
-            return "value";
+            var game = await service.GetGame(id);
+            return game;
         }
         //private static async Task<Game> GetGame(int id)
         //{

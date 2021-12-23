@@ -12,25 +12,19 @@ function Cardlist({Cards}){
 
 }
 
-function GameCard(){ 
+function GameCard(props){ 
     return (
         <div className = "game">
-          {Cards.map((Card) =>
-          <div key= {Card.id}>
+          {/* {Cards.map((Card) => */}
+          {/* <div key= {Card.id}> */}
+          <div>
             <Card sx={{ maxWidth: 300 }}>
-           <CardMedia
-             component="img"
-             height="140"
-             image="/static/images/cards/contemplative-reptile.jpg"
-             alt="green iguana"
-           />
            <CardContent>
              <Typography gutterBottom variant="h5" component="div">
-               Lizard
+               {props.game.name}
              </Typography>
              <Typography variant="body2" color="text.secondary">
-               Lizards are a widespread group of squamate reptiles, with over 6,000
-               species, ranging across all continents except Antarctica
+               {props.game.summary}
              </Typography>
            </CardContent>
            <CardActions>
@@ -39,7 +33,7 @@ function GameCard(){
          </Card>
              </div>
            
-          )}
+          {/* )} */}
                
         </div>
        

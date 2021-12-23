@@ -9,30 +9,11 @@ import { GameCardList } from '../Components/GameCardList'
 
 function Home() {
 
-    const [productionlines, setproductionlines] = useState([])
 
-    async function getAllGames() {
-        try {
-            const apirequest = await axios.get(Variables.GetAllProductionLinesUrl);
-            return apirequest.data;
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
-    async function GetGames() {
-        setproductionlines(await getAllGames());
-        return;
-    }
-
-    useEffect(() => {
-        GetGames()
-    })
     return (
        
         <div>
-            <div class="container">
-            <GameCardList></GameCardList>
+            <div className="container">
             </div>
             <p>home page</p>
         </div>

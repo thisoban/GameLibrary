@@ -19,7 +19,8 @@ namespace Back_End.IGDBService
 
         public async Task<Game> GetGame(int id)
         {
-            var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games, query: $"fields id,name; where id ={id} ;");
+            var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games, query: $"fields *; where id ={id} ;");
+            
             var game = games.First();
 
             Console.WriteLine(game.Name, game.Id);
@@ -28,7 +29,7 @@ namespace Back_End.IGDBService
 
         public async Task<Game[]> GetGames()
         {
-            var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games);
+            var games = await Client.QueryAsync<Game>(IGDBClient.Endpoints.Games, query : $"fields * ;"); ;
           
             return games;
         }
